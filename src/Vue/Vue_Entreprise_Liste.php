@@ -23,6 +23,7 @@ class Vue_Entreprise_Liste  extends Vue_Composant
          <tr>
             <td colspan="5" style="text-align: center">
                 <form action="/Gerer_entreprisesPartenaires/nouveau" method="get" style=\'display: contents\'>
+".genereChampHiddenCSRF()."
                       
  
                         <button type="submit" 
@@ -57,6 +58,7 @@ class Vue_Entreprise_Liste  extends Vue_Composant
                 $str .=  "
                 <td>
                     <form action='/Gerer_entreprisesPartenaires/Modifer/$iemeEntreprise[idEntreprise]' style='display: contents'>
+".genereChampHiddenCSRF()."
                         
                          
                            
@@ -75,6 +77,7 @@ class Vue_Entreprise_Liste  extends Vue_Composant
                         $str .=  "
                 <td>
                     <form action='/Gerer_entreprisesPartenaires/DesactiverEntreprise/$iemeEntreprise[idEntreprise]' style='display: contents'>
+".genereChampHiddenCSRF()."
                          
                              
                             
@@ -94,6 +97,7 @@ class Vue_Entreprise_Liste  extends Vue_Composant
                         $str .=  "
                 <td>
                     <form action='/Gerer_entreprisesPartenaires/ActiverEntreprise/$iemeEntreprise[idEntreprise]' style='display: contents'>
+".genereChampHiddenCSRF()."
                          
                              
                             <button type='submit' 

@@ -21,7 +21,8 @@ class Vue_Admin_Rgpd_Finalites extends Vue_Composant
             $rows .= "<tr>".
                 "<td>$id</td>".
                 "<td>".
-                "<form action='/Admin_Rgpd/finalites/renommer/$id' method='post' style='display: inline-flex; gap:6px;'>".
+                "<form action='/Admin_Rgpd/finalites/renommer/$id' method='post' style='display: inline-flex; gap:6px;'>
+".genereChampHiddenCSRF()."".
                 "<input type='hidden' name='id' value='$id'>".
                 "<input type='text' name='nom' value='$nom' size='28' required>".
                 "<button type='submit'>Renommer</button>".
@@ -29,8 +30,10 @@ class Vue_Admin_Rgpd_Finalites extends Vue_Composant
                 "</td>".
                 "<td>".
                 ($actif
-                    ? "<form action='/Admin_Rgpd/finalites/desactiver/$id' method='get' style='display: contents'><button type='submit'>Désactiver</button></form>"
-                    : "<form action='/Admin_Rgpd/finalites/activer/$id' method='get' style='display: contents'><button type='submit'>Activer</button></form>")
+                    ? "<form action='/Admin_Rgpd/finalites/desactiver/$id' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."<button type='submit'>Désactiver</button></form>"
+                    : "<form action='/Admin_Rgpd/finalites/activer/$id' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."<button type='submit'>Activer</button></form>")
                 ."</td>".
                 "</tr>";
         }
@@ -40,6 +43,7 @@ class Vue_Admin_Rgpd_Finalites extends Vue_Composant
             <h2>Finalités de consentement</h2>
             <div style='margin:10px 0;'>
                 <form action='/Admin_Rgpd/finalites/ajouter' method='post' style='display: inline-flex; gap:8px;'>
+".genereChampHiddenCSRF()."
                     <input type='text' name='nom' placeholder='Nom de la nouvelle finalité' required>
                     <button type='submit'>Ajouter</button>
                 </form>

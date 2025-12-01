@@ -21,10 +21,12 @@ private string $description="";
     {
         if ($this->modeCreation)
             $str= "<H1>Création d'une nouvelle catégorie</H1>
-             <form action='/Gerer_catalogue/CreerCategorie' method='post' >";
+             <form action='/Gerer_catalogue/CreerCategorie' method='post' >
+".genereChampHiddenCSRF()."";
         else
             $str= "<H1>Edition d'une catégorie</H1>
-            <form action='/Gerer_catalogue/mettreAJourCategorie/$this->idCategorie' method='post' >";
+            <form action='/Gerer_catalogue/mettreAJourCategorie/$this->
+".genereChampHiddenCSRF()."idCategorie' method='post' >";
 
         $str .=  "
         

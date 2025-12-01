@@ -12,6 +12,7 @@ class Vue_Mail_ReinitMdp extends Vue_Composant
     {
         $str= "  
   <form action='/reinitmdpconfirm' method='post' style='width: 50%; display: block; margin: auto;'>
+".genereChampHiddenCSRF()."
              
                 <h1>Générer un mot de passe temporaire</h1>
                 
@@ -23,6 +24,7 @@ class Vue_Mail_ReinitMdp extends Vue_Composant
                 </button>
   </form>
   <form action='/reinitmdptoken' method='post' style='width: 50%; display: block; margin: 2rem auto 0;'>
+".genereChampHiddenCSRF()."
                 <h1>Recevoir un lien de réinitialisation</h1>
                 <label><b>Compte</b></label>
                 <input type='email' placeholder='mail du compte à réinitialiser' name='email' required>
@@ -31,6 +33,7 @@ class Vue_Mail_ReinitMdp extends Vue_Composant
                 </button>
   </form>
  <form action='/' method='get' style='width: 50%; display: block; margin: 2rem auto;'>
+".genereChampHiddenCSRF()."
         <button type='submit'>
                             Retour au formulaire de connexion
         </button>

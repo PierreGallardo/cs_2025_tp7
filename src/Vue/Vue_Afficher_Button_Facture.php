@@ -12,7 +12,8 @@ class Vue_Afficher_Button_Facture extends Vue_Composant
 
     function donneTexte(): string
     {
-        return "<form action='/Gerer_CommandeClient/AfficherCommandePDF/$this->idCommande' style='display: contents' method='get'  >
+        return "<form action='/Gerer_CommandeClient/AfficherCommandePDF/$this->
+".genereChampHiddenCSRF()."idCommande' style='display: contents' method='get'  >
                         
                          
                     

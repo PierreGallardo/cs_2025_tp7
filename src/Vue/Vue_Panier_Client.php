@@ -79,6 +79,7 @@ class Vue_Panier_Client extends Vue_Composant
                     $str .= "<td >
                     
                         <form action='/Gerer_Panier/diminuerQTT/$produit[idProduit]' method='post' style='display: contents' >
+".genereChampHiddenCSRF()."
                          
                             
                             <button type='submit'  style='width: auto'>-</button>
@@ -90,6 +91,7 @@ class Vue_Panier_Client extends Vue_Composant
                      </td > 
                      <td >
                      <form action='/Gerer_Panier/augmenterQTT/$produit[idProduit]' method='post' style='display: contents' >
+".genereChampHiddenCSRF()."
                          
                         
                         <button type='submit'  style='width: auto'>+</button>
@@ -144,6 +146,7 @@ class Vue_Panier_Client extends Vue_Composant
             <tr >
                 <td colspan='12' style='text-align: center' >
                     <form action='/Gerer_Panier/validerPanier' method='get' style='display: contents' >
+".genereChampHiddenCSRF()."
                          
                         
                         <button type='submit'  style='width: auto'>

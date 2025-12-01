@@ -16,36 +16,36 @@ class Vue_Menu_Administration extends Vue_Composant
                  return "
              <nav id='menu'>
               <ul id='menu-closed'> 
-                <li><a href='/Gerer_utilisateur?'>Utilisateurs</a></li>
-                <li><a href='/Gerer_monCompte?'>Mon compte</a></li> 
+                <li><a href='/Gerer_utilisateur?".genereVarHrefCSRF()."'>Utilisateurs</a></li>
+                <li><a href='/Gerer_monCompte?".genereVarHrefCSRF()."'>Mon compte</a></li> 
                </ul>
             </nav> ";
             case 2: // Gestionnaire catalogue
                  return "
              <nav id='menu'>
               <ul id='menu-closed'> 
-                <li><a href='/Gerer_catalogue?'>Catalogue</a></li> 
-                <li><a href='/Gerer_monCompte?'>Mon compte</a></li> 
+                <li><a href='/Gerer_catalogue?".genereVarHrefCSRF()."'>Catalogue</a></li> 
+                <li><a href='/Gerer_monCompte?".genereVarHrefCSRF()."'>Mon compte</a></li> 
               </ul>
             </nav> ";
             case 5: // Commercial
                  return "
              <nav id='menu'>
               <ul id='menu-closed'>                 
-                <li><a href='/Gerer_Commande?'>Commandes</a></li>
-                <li><a href='/Gerer_monCompte?'>Mon compte</a></li> 
+                <li><a href='/Gerer_Commande?".genereVarHrefCSRF()."'>Commandes</a></li>
+                <li><a href='/Gerer_monCompte?".genereVarHrefCSRF()."'>Mon compte</a></li> 
                </ul>
             </nav> ";
             case 6: // Gestionnaire RGPD
                  return "
              <nav id='menu'>
               <ul id='menu-closed'> 
-                <li><a href='/Admin_Rgpd'>RGPD</a></li>
-                <li><a href='/Gerer_monCompte?'>Mon compte</a></li> 
+                <li><a href='/Admin_Rgpd?".genereVarHrefCSRF()."'>RGPD</a></li>
+                <li><a href='/Gerer_monCompte?".genereVarHrefCSRF()."'>Mon compte</a></li> 
                </ul>
             </nav> ";
             default:
-                return ""; // Menu vide pour les autres catégories
+                return ""; // Menu vide pour les autres catï¿½gories
         }
     }
 }

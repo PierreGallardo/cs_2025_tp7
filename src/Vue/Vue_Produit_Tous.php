@@ -19,7 +19,8 @@ class Vue_Produit_Tous extends Vue_Composant
                 <table style='margin: auto'>
                     <tr>
                         <td colspan='4'>
-                            <form action='/Gerer_catalogue/nouveauProduit/$this->idCategorie' style='display: contents;' method='get'>
+                            <form action='/Gerer_catalogue/nouveauProduit/$this->
+".genereChampHiddenCSRF()."idCategorie' style='display: contents;' method='get'>
                                  
                                  
                                 <button class='btnRadius' type='submit' >
@@ -50,6 +51,7 @@ class Vue_Produit_Tous extends Vue_Composant
 
                 $str .= "
             <form action='/Gerer_catalogue/ModifierProduit/$nproduit' method='get' id='form-id-$nproduit' class='form_produit'>
+".genereChampHiddenCSRF()."
              
           
             <button onclick='document.getElementById('form-id-" . $nproduit . "').submit();'>

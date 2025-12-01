@@ -79,6 +79,7 @@ class Vue_Produits_Info_Clients extends Vue_Composant
               
                     <td colspan='2'>
                         <form action='/Catalogue_client/AjoutPanierClient/$nproduit' method='post'>
+".genereChampHiddenCSRF()."
                         
                         <input type='hidden' value='$this->idCategorie' name='idCategorie'>
                         <input type='hidden' value='$this->recherche' name='recherche'>

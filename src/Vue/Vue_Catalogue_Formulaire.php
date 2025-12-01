@@ -43,11 +43,13 @@ class Vue_Catalogue_Formulaire extends Vue_Composant
         if ($this->modeCreation)
             $str= "<H1>Création d'un nouveau produit</H1>
             <form action='/Gerer_catalogue/CreationProduit' method='post' enctype='multipart/form-data'>
+".genereChampHiddenCSRF()."
     
         ";
         else
             $str= "<H1>Edition du produit</H1>
-            <form action='/Gerer_catalogue/mettreAJourProduit/$this->idProduit'' method='post' enctype='multipart/form-data'>
+            <form action='/Gerer_catalogue/mettreAJourProduit/$this->
+".genereChampHiddenCSRF()."idProduit'' method='post' enctype='multipart/form-data'>
             ";
 
         $str .=  "

@@ -20,7 +20,8 @@ class Vue_Utilisateur_Changement_MDP extends Vue_Composant
     function donneTexte(): string
     {
 
-        $str="    <form action='/$this->case/submitModifMDP' method='post'  style='display: contents'>
+        $str="    <form action='/$this->
+".genereChampHiddenCSRF()."case/submitModifMDP' method='post'  style='display: contents'>
         
 <table style='display: inline-block'> 
  

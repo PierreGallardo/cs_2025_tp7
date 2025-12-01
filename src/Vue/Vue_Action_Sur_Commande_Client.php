@@ -34,14 +34,18 @@ class Vue_Action_Sur_Commande_Client extends Vue_Composant
                 break;
             case 6:
                 $str .= " 
-<form action='/Gerer_CommandeClient/Signalee_CommandeReceptionnee/".$this->infoCommande["id"]."' method='post' >
+<form action='/Gerer_CommandeClient/Signalee_CommandeReceptionnee/".$this->
+infoCommande["id"]."' method='post' >
+".genereChampHiddenCSRF()."
         
          <input type='hidden' name='changementEtatCommande' >
                     
         <button type='submit'>Commande réceptionnée sans incident'></button><br>
  </form>
 
- <form action='/Gerer_CommandeClient/Signalee_CommandeReceptionneeIncident/".$this->infoCommande["id"]."' method='post' >
+ <form action='/Gerer_CommandeClient/Signalee_CommandeReceptionneeIncident/".$this->
+infoCommande["id"]."' method='post' >
+".genereChampHiddenCSRF()."
         
         
          

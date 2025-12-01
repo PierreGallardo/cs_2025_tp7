@@ -20,8 +20,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
         switch ($this->infoCommande["etat"]) {
             case 2:
                 $str .= "
-                <form action='/Gerer_Commande/Signaler_CommandePayee/" . $this->infoCommande["id"] . "' method='post'>
-       
+                <form action='/Gerer_Commande/Signaler_CommandePayee/" . $this->
+infoCommande["id"]."' method='post'>
+       ".genereChampHiddenCSRF()."
         <input type='hidden' name='changementEtatCommande' >
                   <button type='submit'>
                         Commande payée, virement reçu
@@ -35,8 +36,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
                 break;
             case 3:
                 $str .= "
-                 <form action='/Gerer_Commande/Signalee_CommandeEnPreparation/" . $this->infoCommande["id"] . "' method='post'>
-       
+                 <form action='/Gerer_Commande/Signalee_CommandeEnPreparation/" . $this->
+infoCommande["id"] . "' method='post'>
+".genereChampHiddenCSRF()."       
         <input type='hidden' name='changementEtatCommande' >
                 <button type='submit'  >
                     Commande en préparation (QTT OK)
@@ -46,7 +48,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
                 
                 
                 <br>
-                 <form action='/Gerer_Commande/Signalee_CommandeProblemeStock/" . $this->infoCommande["id"] . "' method='post'>
+                 <form action='/Gerer_Commande/Signalee_CommandeProblemeStock/" . $this->
+infoCommande["id"] . "' method='post'>
+".genereChampHiddenCSRF()."
        
         <input type='hidden' name='changementEtatCommande' >
                 <button type='submit' >
@@ -62,8 +66,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
                 break;
             case 4:
                 $str .= "
-                <form action='/Gerer_Commande/Signalee_CommandeEnvoyée/" . $this->infoCommande["id"] . "' method='post'>
-       
+                <form action='/Gerer_Commande/Signalee_CommandeEnvoyée/" . $this->
+infoCommande["id"] . "' method='post'>
+".genereChampHiddenCSRF()."       
         <input type='hidden' name='changementEtatCommande' >
                 <button type='submit' >
                     Commande expédiée
@@ -79,8 +84,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
 
             case 5:
                 $str .= "
-                <form action='/Gerer_Commande/Signalee_CommandeEnPreparation/" . $this->infoCommande["id"] . "' method='post'>
-       
+                <form action='/Gerer_Commande/Signalee_CommandeEnPreparation/" . $this->
+infoCommande["id"] . "' method='post'>
+".genereChampHiddenCSRF()."       
         <input type='hidden' name='changementEtatCommande' >
                 <button type='submit'  >
                         Réassort arrivé

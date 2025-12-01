@@ -22,21 +22,24 @@ class Vue_Compte_Administration_Gerer extends Vue_Composant
     <table style='display: inline-block'>
         <tr>
             <td>
-                <form action='/$this->action/changerMDP' method='get' style='display: contents'>
+                <form action='/$this->
+".genereChampHiddenCSRF()."action/changerMDP' method='get' style='display: contents'>
                     <button type='submit'>Changer mot de passe</button>
                 </form>
             </td>
         </tr>
         <tr>
             <td>
-                <form action='/$this->action/gerer2FA' method='get' style='display: contents'>
+                <form action='/$this->
+".genereChampHiddenCSRF()."action/gerer2FA' method='get' style='display: contents'>
                     <button type='submit'>Configurer mon deuxieme facteur</button>
                 </form>
             </td>
         </tr>
         <tr>
             <td>
-                <form action='/$this->action/SeDeconnecter' method='get' style='display: contents'>
+                <form action='/$this->
+".genereChampHiddenCSRF()."action/SeDeconnecter' method='get' style='display: contents'>
                     <button type='submit'>Se deconnecter</button>
                 </form>
             </td>

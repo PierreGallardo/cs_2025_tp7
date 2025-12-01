@@ -20,7 +20,8 @@ class Vue_Categories_Liste extends Vue_Composant
                 <ul id='menu-closed'>
                 ";
         if ($this->gestion) {
-            $str .= "<form action='/Gerer_catalogue/AjouterCategorie' method='get' style='display: contents'> 
+            $str .= "<form action='/Gerer_catalogue/AjouterCategorie' method='get' style='display: contents'>
+".genereChampHiddenCSRF()." 
                         
                      <li> 
                     
@@ -53,7 +54,8 @@ class Vue_Categories_Liste extends Vue_Composant
             $i++;
         }
         $str .= "
-                <form action='/Gerer_catalogue/okRechercher' method='get' style='display: contents'> 
+                <form action='/Gerer_catalogue/okRechercher' method='get' style='display: contents'>
+".genereChampHiddenCSRF()." 
                     
                     <li><input type='text' name='recherche' placeholder='Rechercher'> </li>
                         

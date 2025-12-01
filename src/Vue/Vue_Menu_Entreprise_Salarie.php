@@ -17,14 +17,14 @@ class Vue_Menu_Entreprise_Salarie  extends Vue_Composant
         $str="
 <nav id='menu'>
   <ul id='menu-closed'>  
-    <li><a href='/Catalogue_client?'>Catalogue</a></li> 
-    <li><a href='/Gerer_MonCompte_Salarie?'>Mon compte</a></li> 
-    <li><a href='/Gerer_Panier?'>Panier";
+    <li><a href='/Catalogue_client?".genereVarHrefCSRF()."'>Catalogue</a></li> 
+    <li><a href='/Gerer_MonCompte_Salarie?".genereVarHrefCSRF()."'>Mon compte</a></li> 
+    <li><a href='/Gerer_Panier?".genereVarHrefCSRF()."'>Panier";
         if ($this->quantiteMenu > 0) {
             $str .= " ($this->quantiteMenu) ";
         }
         $str .= "</a></li>
-    <li><a href='/Gerer_CommandeClient?'>Mes commandes</a></li> 
+    <li><a href='/Gerer_CommandeClient?".genereVarHrefCSRF()."'>Mes commandes</a></li> 
   </ul>
 </nav> ";
 

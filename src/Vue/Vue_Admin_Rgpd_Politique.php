@@ -39,6 +39,7 @@ class Vue_Admin_Rgpd_Politique extends Vue_Composant
             $infoCourante
             <h3>Ajouter une nouvelle version</h3>
             <form action='/Admin_Rgpd/politique/ajouter' method='post' style='display:block; max-width: 900px; margin: 0 auto;'>
+".genereChampHiddenCSRF()."
                 <div style='margin:6px 0;'>
                     <label>Code version (ex: 2025-09-01):<br>
                         <input type='text' name='code_version' required value='".$this->suggestCode."'>

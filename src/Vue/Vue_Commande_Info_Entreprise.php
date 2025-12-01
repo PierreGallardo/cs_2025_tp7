@@ -55,6 +55,7 @@ class Vue_Commande_Info_Entreprise extends Vue_Composant
                         <td >$item[libEtat]</td>
                         <td >
                             <form action='/Gerer_CommandeClient/VoirDetailCommande/$item[id]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                                  
                                  
                                 

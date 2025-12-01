@@ -29,9 +29,11 @@ private  string $mail="";
         $str .=  "
 <table style='display: inline-block'> ";
 if ($this->ajouter)     
-    $str .= "<form action='/Gerer_Entreprise/buttonCreerSalarie' method='post'>";
+    $str .= "<form action='/Gerer_Entreprise/buttonCreerSalarie' method='post'>
+".genereChampHiddenCSRF()."";
 else
-    $str .= "<form action='/Gerer_Entreprise/ModiferSalarieValider/$this->idSalarie' method='post'>";
+    $str .= "<form action='/Gerer_Entreprise/ModiferSalarieValider/$this->
+".genereChampHiddenCSRF()."idSalarie' method='post'>";
 
 $str.=" 
         <tr>
@@ -87,7 +89,8 @@ $str.="
                 </td>
            
             <td>
-                <form action='/Gerer_Entreprise/réinitialiserMDPSalarie/$this->idSalarie' method='get'>
+                <form action='/Gerer_Entreprise/réinitialiserMDPSalarie/$this->
+".genereChampHiddenCSRF()."idSalarie' method='get'>
                  
                 <button type='submit' >Réinitialiser le mot de passe</button>
                </form>

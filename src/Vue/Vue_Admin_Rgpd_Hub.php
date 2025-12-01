@@ -12,16 +12,19 @@ class Vue_Admin_Rgpd_Hub extends Vue_Composant
             <h1>Gestion RGPD</h1> 
              
                     <form action='/Admin_Rgpd/finalites' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                         <button type='submit'>Finalités</button>
                     </form>
                     — gérer la liste (ajouter, renommer, activer/désactiver)
                 
                     <form action='/Admin_Rgpd/politique' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                         <button type='submit'>Politique</button>
                     </form>
                     — ajouter une nouvelle version de la politique
                  
                     <form action='/Admin_Rgpd/historique' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                         <button type='submit'>Historique</button>
                     </form>
                     — consulter les événements de consentement

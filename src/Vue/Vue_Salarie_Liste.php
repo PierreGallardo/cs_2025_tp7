@@ -25,6 +25,7 @@ Les salariés se connecteront avec leur e-mail<br>
          <tr>
             <td colspan="5" style="text-align: center">
                 <form action=\'/Gerer_Entreprise/ajouterSalarie\' method=\'get\' style=\'display: contents\'>
+".genereChampHiddenCSRF()."
                     
                    
  
@@ -77,6 +78,7 @@ Les salariés se connecteront avec leur e-mail<br>
             $str .=  "
                 <td>
                     <form  action='/Gerer_Entreprise/ModiferSalarie/$salarie[idSalarie]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                     
                         <input type='hidden' name='case' value=''>
                              
@@ -96,6 +98,7 @@ Les salariés se connecteront avec leur e-mail<br>
                     $str .=  "
                 <td>
                     <form action='/Gerer_Entreprise/DesactiverSalarie/$salarie[idSalarie]' style='display: contents'>
+".genereChampHiddenCSRF()."
                         
                         <input type='hidden' name='case' value=''>
                           
@@ -112,6 +115,7 @@ Les salariés se connecteront avec leur e-mail<br>
                     $str .=  "
                 <td>
                     <form action='/Gerer_Entreprise/ActiverSalarie/$salarie[idSalarie]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                          
                          
                              

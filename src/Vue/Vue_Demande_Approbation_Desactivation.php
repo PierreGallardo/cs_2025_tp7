@@ -23,13 +23,15 @@ class Vue_Demande_Approbation_Desactivation  extends Vue_Composant
         
                 
                 <td style='width: 100px; height: 100px;'>
-                <form action='/Gerer_catalogue/OuiDesactivation/$this->idCategorie' method='get' style='display: contents; align-content: center'>
+                <form action='/Gerer_catalogue/OuiDesactivation/$this->
+".genereChampHiddenCSRF()."idCategorie' method='get' style='display: contents; align-content: center'>
                     
                     <button type='submit'  >Oui</button>
                </form>
                     </td>
                 <td style='width: 100px; height: 100px;'>
-                <form action='/Gerer_catalogue/AnnulerDesactivation/$this->idCategorie' style='display: contents; align-content: center'>
+                <form action='/Gerer_catalogue/AnnulerDesactivation/$this->
+".genereChampHiddenCSRF()."idCategorie' style='display: contents; align-content: center'>
                     
                     <button type='submit'  >Annuler</button>
                 </form>

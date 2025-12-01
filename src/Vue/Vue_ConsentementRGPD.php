@@ -56,7 +56,8 @@ class Vue_ConsentementRGPD extends Vue_Composant
         }
         $blocFinalites .= "</fieldset>";
 
-        $form = "<form action='/Gerer_Rgpd/validerRGPD' method='post' style='margin-top:10px;'>"
+        $form = "<form action='/Gerer_Rgpd/validerRGPD' method='post' style='margin-top:10px;'>
+".genereChampHiddenCSRF().""
             . ($this->politiqueCourante ? "<input type='hidden' name='version_politique_id' value='" . (int)$this->politiqueCourante['id'] . "'>" : "")
             . $blocFinalites
             . "<fieldset style='border:1px solid #ccc; padding:10px; margin-top:10px;'><legend>Validation globale</legend>"

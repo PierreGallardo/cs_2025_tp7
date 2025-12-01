@@ -55,11 +55,13 @@ class Vue_Entreprise_Formulaire extends Vue_Composant
         // https://darchevillepatrick.info/html/html_form.htm
         if ($this->modeCreation)
             $str= "<H1>Création d'un nouveau client Entreprise</H1
-        <form action='/Gerer_entreprisesPartenaires/buttonCreer' method='post'>";
+        <form action='/Gerer_entreprisesPartenaires/buttonCreer' method='post'>
+".genereChampHiddenCSRF()."";
 
         else
             $str= "<H1>Edition d'une entreprise</H1>
-                    <form action='/Gerer_entreprisesPartenaires/mettreAJour/$this->idEntreprise' method='post'>";
+                    <form action='/Gerer_entreprisesPartenaires/mettreAJour/$this->
+".genereChampHiddenCSRF()."idEntreprise' method='post'>";
         $str .=  "<table style='display: inline-block'> 
     
          
@@ -167,7 +169,8 @@ class Vue_Entreprise_Formulaire extends Vue_Composant
                
             </td>
             <td>
-            <form action='/Gerer_entreprisesPartenaires/réinitialiserMDP/$this->idEntreprise' method='post'>
+            <form action='/Gerer_entreprisesPartenaires/réinitialiserMDP/$this->
+".genereChampHiddenCSRF()."idEntreprise' method='post'>
              <button type='submit'>Réinitialiser le mot de passe</button>
               </form>
                 ";

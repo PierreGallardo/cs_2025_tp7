@@ -16,6 +16,7 @@ class Vue_Liste_Categorie  extends Vue_Composant
     <h1>Liste des Catégories de produit</h1> <br>
     <table style='    display: inline-block;'>
         <form action='/Gerer_catalogue/nouvelleCategorie' method='get'>
+".genereChampHiddenCSRF()."
             
             <td colspan='4'>
             <button class='btnRadius'  type='submit'  >
@@ -39,6 +40,7 @@ class Vue_Liste_Categorie  extends Vue_Composant
                 <td>$iemeCategorie[libelle]</td>
                 <td>
                     <form action='/Gerer_catalogue/ModifierCategorie/$iemeCategorie[idCategorie]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                          
                              
                               
@@ -52,6 +54,7 @@ class Vue_Liste_Categorie  extends Vue_Composant
             if ($iemeCategorie["desactiverCategorie"] == 0) {
                 $str .=  "<td>
                 <form  action='/Gerer_catalogue/DesactiverCategorie/$iemeCategorie[idCategorie]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                  
                          
                               
@@ -63,6 +66,7 @@ class Vue_Liste_Categorie  extends Vue_Composant
             } elseif ($iemeCategorie["desactiverCategorie"] == 1) {
                 $str .=  "<td>
                         <form action='/Gerer_catalogue/ActiverCategorie/$iemeCategorie[idCategorie]' method='get'  style='display: contents'>
+".genereChampHiddenCSRF()."
                              
                              
                              

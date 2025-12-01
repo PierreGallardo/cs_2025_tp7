@@ -42,7 +42,8 @@ class Vue_Compte_Administration_DeuxiemeFacteur extends Vue_Composant
         $contenu = "<p>Aucun facteur d'authentification disponible pour le moment.</p>";
         if ($options !== "") {
             $contenu = "
-        <form action='/$this->action/definir2FA' method='post'>
+        <form action='/$this->
+".genereChampHiddenCSRF()."action/definir2FA' method='post'>
             <label for='facteur-authentification'>Choisir mon deuxieme facteur :</label>
             <select id='facteur-authentification' name='idFacteurAuthentification' required>
                 $options
@@ -54,7 +55,8 @@ class Vue_Compte_Administration_DeuxiemeFacteur extends Vue_Composant
         $suppression = "";
         if ($this->facteurSelectionne !== null) {
             $suppression = "
-        <form action='/$this->action/supprimer2FA' method='post' style='margin-top: 1rem;'>
+        <form action='/$this->
+".genereChampHiddenCSRF()."action/supprimer2FA' method='post' style='margin-top: 1rem;'>
             <button type='submit'>Supprimer mon deuxieme facteur</button>
         </form>";
         }

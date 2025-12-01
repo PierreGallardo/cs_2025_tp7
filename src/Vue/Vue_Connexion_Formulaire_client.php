@@ -16,6 +16,7 @@ class Vue_Connexion_Formulaire_client extends Vue_Composant
 <h1>Café : Connexion</h1>
 <div  style='    width: 50%;    display: block;    margin: auto;'>  
   <form action='/visiteur/SeConnecter' method='post'>
+".genereChampHiddenCSRF()."
   
                 <h1>Connexion</h1>
                 
@@ -38,6 +39,7 @@ class Vue_Connexion_Formulaire_client extends Vue_Composant
 
 </form>
 <form action='/reinitmdp' method='get'>
+".genereChampHiddenCSRF()."
 
 <h1>Mot de passe perdu ?</h1>
 

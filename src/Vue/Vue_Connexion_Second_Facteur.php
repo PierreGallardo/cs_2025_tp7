@@ -25,11 +25,13 @@ class Vue_Connexion_Second_Facteur extends Vue_Composant
     <h1>Verification en deux etapes</h1>
      $messageHtml
     <form action='/visiteur/verifier2FA' method='post'>
+".genereChampHiddenCSRF()."
         <label for='code2FA'>Code à 6 chiffres :</label>
         <input type='text' id='code2FA' name='code2FA' maxlength='6' pattern='[0-9]{6}' required>
         <button type='submit'>Valider</button>
     </form>
     <form action='/visiteur/SeConnecter' method='get' style='margin-top: 1rem;'>
+".genereChampHiddenCSRF()."
         <button type='submit'>Annuler</button>
     </form>
     ";

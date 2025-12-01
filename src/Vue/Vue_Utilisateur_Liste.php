@@ -22,6 +22,7 @@ class Vue_Utilisateur_Liste extends Vue_Composant
          <tr>
             <td colspan="6" style="text-align: center">
                 <form action="/Gerer_utilisateur/nouveau" method="get" style=\'display: contents\'>
+".genereChampHiddenCSRF()."
                     
                    
  
@@ -58,6 +59,7 @@ class Vue_Utilisateur_Liste extends Vue_Composant
 
                 $str .=  "
                 <form action='/Gerer_utilisateur/ModifierUtilisateur/$iemeUtilisateur[idUtilisateur]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                  
                          
                         <button type='submit' 
@@ -74,6 +76,7 @@ class Vue_Utilisateur_Liste extends Vue_Composant
                         $str .=  "
             <td>
                 <form action='/Gerer_utilisateur/DesactiverUtilisateur/$iemeUtilisateur[idUtilisateur]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                     
                     <input type='hidden' name='case' value='Gerer_utilisateur'>
                     
@@ -92,6 +95,7 @@ class Vue_Utilisateur_Liste extends Vue_Composant
                         $str .=  "
             <td>
                 <form action='/Gerer_utilisateur/ActiverUtilisateur/$iemeUtilisateur[idUtilisateur]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()."
                            
                         
                           <button type='submit' 

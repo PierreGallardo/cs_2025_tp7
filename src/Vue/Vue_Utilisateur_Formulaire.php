@@ -28,11 +28,13 @@ private string $categorieUtilisateur="";
         if ($this->modeCreation)
             $str= "<H1>Création d'un nouvel utilisateur</H1>
         
-        <form class='formBox' action='/Gerer_utilisateur/buttonCreerUtilisateur' method='post'>";
+        <form class='formBox' action='/Gerer_utilisateur/buttonCreerUtilisateur' method='post'>
+".genereChampHiddenCSRF()."";
         else
             $str= "<H1>Edition d'un utilisateur</H1>
         
-        <form class='formBox' action='/Gerer_utilisateur/mettreAJourUtilisateur/$this->idUtilisateur' method='post'>";
+        <form class='formBox' action='/Gerer_utilisateur/mettreAJourUtilisateur/$this->
+".genereChampHiddenCSRF()."idUtilisateur' method='post'>";
 
         $str .= "
 <table style='display: inline-block'> 
@@ -85,7 +87,8 @@ private string $categorieUtilisateur="";
                 </form>
             </td>
             <td>
-            <form class='corrigeInline' action='/Gerer_utilisateur/reinitialiserMDPUtilisateur/$this->idUtilisateur' method='post'>                
+            <form class='corrigeInline' action='/Gerer_utilisateur/reinitialiserMDPUtilisateur/$this->
+".genereChampHiddenCSRF()."idUtilisateur' method='post'>                
                 <button type='submit'  >Réinitialiser le mot de passe</button>
                
                 ";

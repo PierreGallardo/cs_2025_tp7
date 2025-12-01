@@ -19,7 +19,8 @@ class Vue_Commande_Etat extends Vue_Composant
                 ";
 
         $str .=  "
-                <form action='/Gerer_Commande/Toute' method ='get' style='display: contents'>      
+                <form action='/Gerer_Commande/Toute' method ='get' style='display: contents'>
+".genereChampHiddenCSRF()."      
                     
                     <li><button type='submit' >Toutes</button> </li>
                 </form>";
@@ -29,7 +30,8 @@ class Vue_Commande_Etat extends Vue_Composant
 
             $str .=  "
                    <li>
-                        <form action='/Gerer_Commande/boutonCategorie/$iemeEtatCommande[idEtatCommande]' method='get' style='display: contents'> 
+                        <form action='/Gerer_Commande/boutonCategorie/$iemeEtatCommande[idEtatCommande]' method='get' style='display: contents'>
+".genereChampHiddenCSRF()." 
                              
                              
                             <button type='submit' name='action' value=''> $iemeEtatCommande[libelle]</button>
@@ -40,7 +42,8 @@ class Vue_Commande_Etat extends Vue_Composant
             $i++;
         }
         $str .=  "
-                <form action='/Gerer_Commande/okRechercher' method='post' style='display: contents'> 
+                <form action='/Gerer_Commande/okRechercher' method='post' style='display: contents'>
+".genereChampHiddenCSRF()." 
                      
                     
                     <li><input type='text' name='recherche' placeholder='Rechercher'> </li>
