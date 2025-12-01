@@ -2,6 +2,7 @@
 //error_log("page debut");
 session_start();
 include_once "../vendor/autoload.php";
+include_once "../src/fonctions/CSRF.php";
 
 use Slim\Factory\AppFactory;
 use App\Utilitaire\Vue;
